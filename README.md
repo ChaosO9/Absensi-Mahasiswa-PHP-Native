@@ -1,5 +1,6 @@
-# Web-Absensi-Mahasiswa-UNINDRA V 1.0 BETA
-Ini adalah sistem absensi sederhana mahasiswa menggunakan Bootstrap dan PHP yang  bisa digunakan untuk Dosen, belum mempunyai Admin untuk mengolah datanya
+# Web-Absensi-Mahasiswa-TI-4A V 1.0 BETA
+Ini adalah sistem absensi sederhana mahasiswa menggunakan Bootstrap dan PHP yang bisa digunakan untuk Admin kelas, belum mempunyai Admin untuk mengolah datanya.
+Rencananya repositori ini akan diubah sesuai dengan spesifikasi untuk sistem absensi kelas TI 4A
 
 ## Website ini dibuat dengan :
 1. Html
@@ -16,7 +17,7 @@ email : sutan@gmail.com
 password : admin
 
 ## Database : 
-akademi.sql
+akademik.sql
 
 ## Screenshoot :
 ![Screenshot (68)](https://user-images.githubusercontent.com/48480032/60427336-b1f4ae80-9c20-11e9-9d0c-8e3ca3cf6472.png)
