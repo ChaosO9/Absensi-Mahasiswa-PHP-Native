@@ -50,14 +50,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/style.css">
-    <title>Registrasi Dosen</title>
+    <title>Registrasi Admin</title>
 </head>
 <body class="login">
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <form action="" class="panel" method="post">
-                    <h3 class="mb-4 text-center text-uppercase">Registrasi Dosen</h3>
+                    <h3 class="mb-4 text-center text-uppercase">Registrasi Admin</h3>
                     <div class="form-group ml-5 mr-5">
                         <input type="text" name="email" id="email" class="form-control form-control-lg radius" placeholder="Email">
                     </div>

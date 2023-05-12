@@ -25,7 +25,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Lihat Kelas | UNINDRA</title>
+  <title>Lihat Kelas | Kelas TI 4A</title>
 
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -49,7 +49,7 @@
         <div class="sidebar-brand-icon">
           <i class="fas fa-university"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">UNINDRA</div>
+        <div class="sidebar-brand-text mx-3">Kelas TI 4A</div>
       </a>
 
       <!-- Divider -->
@@ -214,7 +214,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Andikha Dian Nugraha 2019</span>
+            <span>Copyright &copy; TI 4A</span>
           </div>
         </div>
       </footer>

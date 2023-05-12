@@ -30,7 +30,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard | TI 4A</title>
+    <title>Dashboard | Kelas TI 4A</title>
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -227,28 +227,6 @@
                             </div>
                         </div>
                         <!-- Akhir Rekap Absensi -->
-                        <!-- Rekap Absensi -->
-                        <div class="col-xl-3 col-md-6 mb-4 ">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <a href="#" style="text-decoration:none;" data-toggle="modal"
-                                    data-target="#comingModal">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                    Tugas <br> yang sedang
-                                                    aktif</div>
-                                                <div class="h5 mb-0 font-weight-bold text-gray-800">- (Tugas)</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-book fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <!-- Akhir Rekap Absensi -->
 
                     </div>
                     <!-- /.container-fluid -->
@@ -260,7 +238,7 @@
                 <footer class="sticky-footer bg-white">
                     <div class="container my-auto">
                         <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Andikha Dian Nugraha 2019</span>
+                            <span>Copyright &copy; TI 4A</span>
                         </div>
                     </div>
                 </footer>
