@@ -1,25 +1,25 @@
 <?php
 	
-  session_start();
-  if ( !isset($_SESSION["login"]) ) {
+session_start();
+if ( !isset($_SESSION["login"]) ) {
     header("Location: login.php");
     exit;
 }
-	include "koneksi.php";
+	include "koneksi2.php";
 	/*
 	if(isset($_session['id'])){
 		echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';	
 	}*/		
-	$dosen_id = $_SESSION['dosen_id'];
-	$dosen_name = $_SESSION["dosen_user_name"];
-  $dosen_foto = $_SESSION["dosen_user_foto"];
-  $dosen_last_login = $_SESSION["dosen_user_last_login"];
+	$admin_id = $_SESSION['admin_id'];
+	$admin_name = $_SESSION["admin_user_name"];
+    $admin_foto = $_SESSION["admin_user_foto"];
+    $admin_last_login = $_SESSION["admin_user_last_login"];
 
-  $jumlah_matkul=mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM matkul WHERE id_dosen='$dosen_id'"));
-  $jumlah_kelas=mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM kelas WHERE id_dosen='$dosen_id'"));
-	$jumlah_siswa=mysqli_num_rows(mysqli_query($koneksi,"SELECT * FROM mahasiswa"));
+    $jumlah_matkul= 9;//mysqli_num_rows(mysqli_query($koneksi2,"SELECT * FROM matkul WHERE id_dosen='$dosen_id'"));
+    $jumlah_kelas= 1; //mysqli_num_rows(mysqli_query($koneksi2,"SELECT * FROM kelas WHERE id_dosen='$dosen_id'"));
+	$jumlah_siswa=mysqli_num_rows(mysqli_query($koneksi2,"SELECT * FROM mahasiswa"));
 	
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +46,6 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -116,7 +115,7 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav align-items-center">
                             <span class="mr-2 d-none d-lg-inline text-gray-600 medium">Terakhir Login : <span
-                                    class="text-success"><?=$dosen_last_login?></span></span>
+                                    class="text-success"><?=$admin_last_login?></span></span>
                         </li>
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -124,8 +123,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><?=$dosen_name?></span>
-                                <img class="img-profile rounded-circle" src="img/<?=$dosen_foto?>">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><?=$admin_name?></span>
+                                <img class="img-profile rounded-circle" src="img/<?=$admin_foto?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

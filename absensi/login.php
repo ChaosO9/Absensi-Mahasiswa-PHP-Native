@@ -7,33 +7,45 @@
     }
 
     //Menghubungkan database
-    require 'koneksi.php';
+    require 'koneksi2.php';
 
     //Proses login dan pengecekan password
     if( isset($_POST["login"]) ) {
         $email = $_POST["email"];
         $password = $_POST["password"];
-
-       $result = mysqli_query($koneksi, "SELECT * FROM dosen WHERE email ='$email'");
-
-    if( mysqli_num_rows($result) === 1 ) {
+        $nim = intval($email);
+        
+        $result = mysqli_query($koneksi, "SELECT akun_admin.*, akun_mahasiswa.email, akun_mahasiswa.nim, mahasiswa.foto FROM akun_admin
+        JOIN mahasiswa ON akun_admin.nim = mahasiswa.nim 
+        JOIN akun_mahasiswa ON akun_admin.nim = akun_mahasiswa.nim 
+        WHERE akun_mahasiswa.email = '$email' OR akun_mahasiswa.nim = $nim");
+    if( mysqli_num_rows($result) === 1) {
             while($row = mysqli_fetch_assoc($result)) {
-                if( password_verify($password, $row["password"]) ) {
-                    $_SESSION["login"] = true;
-                    $id=$row["id_dosen"];
-                    $_SESSION['dosen_id']=$row["id_dosen"];
-                    $_SESSION['dosen_user_email']=$email;
-                    $_SESSION['dosen_user_name']=$row["nama"];
-                    $_SESSION['dosen_user_foto']=$row["foto"];
-                    $_SESSION['dosen_user_last_login']=$row["last_login"];
-                    header("Location: index.php");
-                    exit;
-                }
-            }
-    }
-    //Flag error bahwa password/email salah
-    $error = true;
-    }
+                echo '<script> <?php print_r($row); ?> </script>';
+$sqlphoto = mysqli_query($koneksi, "SELECT foto FROM mahasiswa WHERE nim = '{$row["nim"]}'");
+if ($sqlphoto) {
+$photo = mysqli_fetch_assoc($sqlphoto);
+$admin_photo = $photo['foto'];
+}else{
+$admin_photo = 'placeholder.jpg';
+}
+
+if( password_verify($password, $row["password"]) ) {
+$_SESSION["login"] = true;
+$id=$row["id_admin"];
+$_SESSION['admin_id']=$row["id_admin"];
+$_SESSION['admin_user_email']=$row["email"];
+$_SESSION['admin_user_name']=$row["nama"];
+$_SESSION['admin_user_foto']=$row["foto"];
+$_SESSION['admin_user_last_login']=$row["last_login"];
+header("Location: index.php");
+exit;
+}
+}
+}
+//Flag error bahwa password/email salah
+$error = true;
+}
 ?>
 
 <!DOCTYPE html>
@@ -72,9 +84,10 @@
                     <div class="form-group mt-4 ml-5 mr-5">
                         <button type="submit" class="btn btn-info btn-login block radius" name="login">Login</button>
                     </div>
-                    <!-- <div class="form-group mt-4 ml-5 mr-5">
-                    <a href="registrasidosen.php" class="btn btn-info btn-regis block radius" role="button">Registrasi</a>
-                    </div> -->
+                    <div class="form-group mt-4 ml-5 mr-5">
+                        <a href="registrasiadmin.php" class="btn btn-info btn-regis block radius"
+                            role="button">Registrasi</a>
+                    </div>
                 </form>
             </div>
         </div>
