@@ -59,7 +59,7 @@ $error = true;
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Login Admin | Sistem Absensi TI 4A</title>
+    <title>Login Mahasiswa | Sistem Absensi TI 4A</title>
 </head>
 
 <body class="login">
@@ -67,7 +67,7 @@ $error = true;
         <div class="row justify-content-center form-login mt-5">
             <div class="col-md-6">
                 <form action="" class="panel" method="post">
-                    <h3 class="mb-4 text-center text-uppercase">Login Admin Absen TI 4A</h3>
+                    <h3 class="mb-4 text-center text-uppercase">Login Mahasiswa TI 4A</h3>
                     <?php if( isset($error) ) :?>
                     <div class="alert alert-danger mr-5 ml-5 radius" role="alert">
                         Email / Password Anda salah
@@ -85,7 +85,7 @@ $error = true;
                         <button type="submit" class="btn btn-info btn-login block radius" name="login">Login</button>
                     </div>
                     <div class="form-group mt-4 ml-5 mr-5">
-                        <a href="registrasiadmin.php" class="btn btn-info btn-regis block radius"
+                        <a href="registrasimahasiswa.php" class="btn btn-info btn-regis block radius"
                             role="button">Registrasi</a>
                     </div>
                 </form>

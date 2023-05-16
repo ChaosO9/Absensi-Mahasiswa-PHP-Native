@@ -55,7 +55,7 @@
         if( registrasi($_POST) > 0 ) {
             echo "<script>
                 alert('Mahasiswa berhasil ditambahkan');
-                document.location.href = 'login.php';
+                document.location.href = 'loginmahasiswa.php';
                 </script>";
             
         } else {
@@ -82,10 +82,37 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
                 <form action="" class="panel" method="post">
-                    <h3 class="mb-4 text-center text-uppercase">Registrasi Admin</h3>
+                    <h3 class="mb-4 text-center text-uppercase">Registrasi Mahasiswa</h3>
                     <div class="form-group ml-5 mr-5">
                         <input type="text" name="nim" id="nim" class="form-control form-control-lg radius"
                             placeholder="NIM">
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <input type="text" name="nomor_absen" id="nomor_absen" class="form-control form-control-lg radius"
+                            placeholder="Nomor Absen">
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <input type="text" name="nama" id="nama" class="form-control form-control-lg radius"
+                            placeholder="Nama Lengkap">
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <input type="text" name="email" id="email" class="form-control form-control-lg radius"
+                            placeholder="Email">
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Pilih Jenis Kelamin
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Laki-Laki</a>
+                                <a class="dropdown-item" href="#">Perempuan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group ml-5 mr-5">
+                        <input type="text" name="foto" id="foto" class="form-control form-control-lg radius"
+                            placeholder="Foto">
                     </div>
                     <div class="form-group ml-5 mr-5">
                         <input type="password" name="password" id="password" class="form-control form-control-lg radius"
@@ -95,10 +122,7 @@
                         <input type="password" name="password2" id="password2"
                             class="form-control form-control-lg radius" placeholder="Konfirmasi Password">
                     </div>
-                    <div class="form-group ml-5 mr-5">
-                        <input type="password" name="token" id="token" class="form-control form-control-lg radius"
-                            placeholder="Token">
-                    </div>
+                    
                     <div class="form-group mt-4 ml-5 mr-5">
                         <button type="submit" class="btn btn-info btn-login block radius"
                             name="register">Registrasi</button>
@@ -112,6 +136,7 @@
 
 
     <script src="js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>
